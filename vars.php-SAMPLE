@@ -1,0 +1,38 @@
+<?php
+
+$DEPLOYMENT_PATH = '~amin/cdc-light';
+
+// -- master --
+$AUTH0_DOMAIN = 'amin01.au.auth0.com';
+$CLIENT_ID = 'XXX';
+$CLIENT_SECRET = 'XXX';
+$MASTER_BASE_URL = "http://master.com/$DEPLOYMENT_PATH/master";
+$REDIRECT_URI = "$MASTER_BASE_URL/cb.php";
+$MASTER_LOGOUT_URL = "$MASTER_BASE_URL/logout.php";
+
+// -- openssl --
+$encryption_iv = '1234567891011121';
+$encryption_key = "XXXXX";
+$ciphering = "AES-128-CBC";
+
+$LEEWAY = 10; // in seconds
+
+// -- app1  --
+$APP1_CLIENT_ID = 'XXXX';
+$APP1_CLIENT_SECRET = 'XXXX';
+$APP1_BASE_URL = "http://app1.com/$DEPLOYMENT_PATH/app";
+$APP1_CDC_URL = "$APP1_BASE_URL/setcdc.php";
+$APP1_SLO_URL = "$APP1_BASE_URL/unsetcdc.php";
+$APP1_REDIRECT_URI = "$APP1_BASE_URL/cb.php";
+$APP1_LOGOUT_URL = "$APP1_BASE_URL/logout.php";
+
+// -- app2 --
+$APP2_CLIENT_ID = 'XXXX';
+$APP2_CLIENT_SECRET = 'XXXX';
+$APP2_BASE_URL = "http://app2.com/$DEPLOYMENT_PATH/app";
+$APP2_CDC_URL = "$APP2_BASE_URL/setcdc.php";
+$APP2_SLO_URL = "$APP2_BASE_URL/unsetcdc.php";
+$APP2_REDIRECT_URI = "$APP2_BASE_URL/cb.php";
+$APP2_LOGOUT_URL = "$APP2_BASE_URL/logout.php";
+
+
